@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(CMakeProjectTemplate LANGUAGES CXX)
+project(
+  CMakeProjectTemplate
+  VERSION 0.1
+  DESCRIPTION "Produces Xcode project .xcodeproj bundle"
+  LANGUAGES CXX)
 
 # CMakeProjectTemplate uses C++17 features
 set(CMAKE_CXX_STANDARD 17)
@@ -14,7 +18,7 @@ list(APPEND CMAKE_MODULE_PATH
 	${CMAKE_SOURCE_DIR}/cmake)
 
 # Find Python
-find_package (Python COMPONENTS Interpreter Development)
+find_package(Python COMPONENTS Interpreter Development)
 
 if(NOT Python_FOUND)
     message(FATAL_ERROR "Python couldn't be located!")
