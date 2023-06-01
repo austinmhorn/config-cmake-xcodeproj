@@ -37,6 +37,14 @@ else
   brew install cmake
 fi
 
+# Check for Xcode Command Line Tools
+if [[ ! $(command which -s xcode-select) == 0 ]]; then
+  echo "Found xcode-select:"
+  which xcode-select
+else
+  xcode-select --install
+fi
+
 # Configure for XCode
 command cmake -S . -B xbuild -GXcode
 
