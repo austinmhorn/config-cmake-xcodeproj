@@ -18,6 +18,9 @@
   </p>
 </h2>
 
+Install Xcode Command Line Tools
+
+    xcode-select --install
   
 Configure for Xcode:
 
