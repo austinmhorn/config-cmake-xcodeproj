@@ -21,7 +21,7 @@
   
 Configure for Xcode:
 
-    command cmake -S . -B xbuild -GXcode
+    cmake -S . -B xbuild -GXcode
     
 Build XCode Project:
 
